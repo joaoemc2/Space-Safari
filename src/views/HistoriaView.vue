@@ -41,6 +41,12 @@ function voltarParaHome() {
       </div>
       <p class="texto-um">{{ listagem.textoPrincipal }}</p>
       <p class="texto-dois">{{ listagem.textoSecundario }}</p>
+      <div class="audio">
+        <button class="btn-audio">
+          <i class="bi bi-volume-up"></i>
+          <p>Escutar</p>
+        </button>
+      </div>
     </section>
     <footer class="paginator">
       <button
@@ -53,7 +59,7 @@ function voltarParaHome() {
       <p class="pagina">{{ listagem.Pagina }}</p>
       <button
         class="btn-proximo"
-        :class="paginaSelecionada == ultimaPagina -1 ? 'disabled' : ''"
+        :class="paginaSelecionada == ultimaPagina - 1 ? 'disabled' : ''"
         @click="proximaPagina()"
       >
         <i class="bi bi-chevron-right"></i>Proximo
@@ -84,6 +90,10 @@ function voltarParaHome() {
   }
   .main-container {
     padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     .image {
       display: flex;
       justify-content: center;
@@ -106,8 +116,25 @@ function voltarParaHome() {
     }
     .texto-dois {
       margin-top: 16px;
+      margin-bottom: 16px;
+    }
+    .audio {
+      .btn-audio {
+        border: none;
+        background: none;
+        .bi {
+          color: #f3f3f3;
+          font-size: 52px;
+        }
+        p {
+          color: #f3f3f3;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
     }
   }
+
   .paginator {
     margin-bottom: 32px;
     display: flex;
