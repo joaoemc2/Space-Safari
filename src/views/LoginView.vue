@@ -14,10 +14,12 @@ function login() {
 
 <template>
   <main>
-    <img class="image" src="@/assets/image/get_starting1.png" alt="" />
+    <div class="logo">
+      <img class="image" src="@/assets/image/logo.png" alt="" />
+      <h1>Space Safari</h1>
+    </div>
     <div class="texto-container">
-      <h1>Project Sagan</h1>
-      <p>Ensinando sobre o universo para nosso pequeninos!</p>
+      <p>Explore o espaço e desvende os mistérios do cosmos enquanto se diverte aprendendo!</p>
     </div>
     <div class="btn-container">
       <button class="btn-google" @click="login()">
@@ -30,7 +32,7 @@ function login() {
         <i class="bi bi-instagram"></i>
         <i class="bi bi-linkedin"></i>
       </div>
-      <p>Project Sagan - 2023</p>
+      <p>Space Safari - 2023</p>
     </footer>
   </main>
 </template>
@@ -43,29 +45,35 @@ main {
   justify-content: space-between;
   background: #7063ff;
   gap: 42px;
-  .image {
-    margin-top: 64px;
-    width: 70%;
-  }
-  .texto-container {
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .image {
+      margin-top: 64px;
+      width: 70%;
+    }
     h1 {
       text-align: center;
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 500;
-      font-size: 22px;
+      font-size: 24px;
       line-height: 27px;
       color: #f3f3f3;
       margin-bottom: 16px;
     }
+  }
+  .texto-container {
     p {
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 400;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 20px;
       text-align: center;
       color: #f3f3f3;
+      padding: 30px;
     }
   }
   .btn-container {
@@ -95,6 +103,7 @@ main {
     }
   }
   .footer {
+    margin-bottom: 8px;
     .social-icons {
       display: flex;
       justify-content: center;
@@ -116,9 +125,5 @@ main {
       text-align: center;
     }
   }
-}
-
-.temaWhite {
-  background-color: #f3f3f3;
 }
 </style>
