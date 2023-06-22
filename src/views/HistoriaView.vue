@@ -51,7 +51,11 @@ function voltarParaHome() {
         <i class="bi bi-chevron-left"></i>Anterior
       </button>
       <p class="pagina">{{ listagem.Pagina }}</p>
-      <button class="btn-proximo" @click="proximaPagina()">
+      <button
+        class="btn-proximo"
+        :class="paginaSelecionada == ultimaPagina -1 ? 'disabled' : ''"
+        @click="proximaPagina()"
+      >
         <i class="bi bi-chevron-right"></i>Proximo
       </button>
     </footer>
@@ -85,7 +89,7 @@ function voltarParaHome() {
       justify-content: center;
       width: 100%;
       img {
-        width: 70%; 
+        width: 70%;
       }
     }
     .texto-um,
