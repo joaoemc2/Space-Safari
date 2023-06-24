@@ -11,7 +11,7 @@ const dadosCards = ref([
     porcentagem: 0,
     componente: 0,
     textoBotao: 'Iniciar',
-    imagem: '/src/assets/image/solar-system.png'
+    imagem: 'Home/solar-system.png'
   },
   {
     titulo: 'Descobrindo o Universo',
@@ -20,7 +20,7 @@ const dadosCards = ref([
     porcentagem: 90,
     componente: 1,
     textoBotao: 'Continuar',
-    imagem: '/src/assets/image/space-shuttle.png'
+    imagem: 'Home/space-shuttle.png'
   },
   {
     titulo: 'Em Busca das Estrelas',
@@ -29,7 +29,7 @@ const dadosCards = ref([
     porcentagem: 12,
     componente: 2,
     textoBotao: 'Continuar',
-    imagem: '/src/assets/image/falling-star.png'
+    imagem: 'Home/falling-star.png'
   }
 ])
 </script>

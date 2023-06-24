@@ -1,17 +1,38 @@
 <script setup lang="ts">
 import { dadosListagem } from '@/stores/dadosListagem'
-import { computed, ref } from 'vue'
+import { computed, ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-
 const store = dadosListagem()
+
+// variáveis
 const paginaSelecionada = ref<number>(0)
+const ultimaPagina = ref(store.listagem[store.historiaSelecionada].length)
+
+// life cycle
+onMounted(() => {
+  // toggleFullscreen()
+})
 
 const listagem = computed(() => {
   return store.listagem[store.historiaSelecionada][paginaSelecionada.value]
 })
-const ultimaPagina = ref(store.listagem[store.historiaSelecionada].length)
+
+// funções
+function toggleFullscreen() {
+  const element = document.documentElement
+
+  if (document.fullscreenElement) {
+    if (document.exitFullscreen) {
+      document.exitFullscreen()
+    }
+  } else {
+    if (element.requestFullscreen) {
+      element.requestFullscreen()
+    }
+  }
+}
 
 function proximaPagina() {
   if (paginaSelecionada.value + 1 < ultimaPagina.value) {
@@ -28,6 +49,10 @@ function voltarPagina() {
 function voltarParaHome() {
   router.push('home')
 }
+
+function getImageUrl(name: string) {
+  return new URL(`/src/assets/image/${name}`, import.meta.url).href
+}
 </script>
 
 <template>
@@ -37,7 +62,7 @@ function voltarParaHome() {
     </header>
     <section class="main-container">
       <div class="image">
-        <img :src="listagem.imagem" alt="" />
+        <img :src="getImageUrl(listagem.imagem)" alt="" />
       </div>
       <p class="texto-um">{{ listagem.textoPrincipal }}</p>
       <p class="texto-dois">{{ listagem.textoSecundario }}</p>
