@@ -18,6 +18,10 @@ function redirecionar() {
   store.alternarHistoria(prop.redirect)
   router.push('/historia')
 }
+
+const getImageUrl = (name: string) => {
+  return new URL(`/src/assets/image/${name}`, import.meta.url).href
+}
 </script>
 
 <template>
@@ -27,7 +31,7 @@ function redirecionar() {
         <h2>{{ titulo }}</h2>
         <p>{{ texto }}</p>
       </div>
-      <img class="imagem" :src="imagem" />
+      <img class="imagem" :src="getImageUrl(imagem)" />
     </div>
     <div class="section-dois">
       <button class="btn-two" @click="redirecionar()">{{ textoBotao }}</button>
