@@ -75,7 +75,7 @@ function pauseAudio() {
       <img :src="getImageUrl(listagem.imagem)" alt="" />
     </div>
     <section class="main-container">
-      <h2 class="subtitulo">Sistema Solar</h2>
+      <h2 class="subtitulo">{{ listagem.subTitulo }}</h2>
       <p class="texto-um">{{ listagem.textoPrincipal }}</p>
       <p class="texto-dois">{{ listagem.textoSecundario }}</p>
       <div class="audio">
@@ -92,7 +92,7 @@ function pauseAudio() {
         >
           <i class="bi bi-chevron-left"></i>Anterior
         </button>
-        <p class="pagina">{{ listagem.Pagina }}</p>
+        <p class="pagina">{{ listagem.pagina }}</p>
         <button
           class="btn-proximo"
           :class="paginaSelecionada == ultimaPagina - 1 ? 'disabled' : ''"
