@@ -1,16 +1,18 @@
 [
   {
     "titulo": "teste 2",
+    "subTitulo": "subtitulo teste",
     "textoPrincipal": "teste text 2",
     "textoSecundario": "Vamos embarcar nessa aventura espacial e aprender sobre o universo!",
     "imagem": "SistemaSolar/010-solar-system.png",
-    "Pagina": 1
+    "pagina": 1
   },
   {
     "titulo": "teste 2",
+    "subTitulo": "subtitulo teste",
     "textoPrincipal": "text teste 2",
     "textoSecundario": null,
     "imagem": "SistemaSolar/009-planet-earth.png",
-    "Pagina": 2
+    "pagina": 2
   }
 ]
