@@ -69,7 +69,13 @@ function pauseAudio() {
 <template>
   <main class="historia-view">
     <header class="header">
+      <button class="voltar" @click="voltarParaHome()">
+        <i class="bi bi-arrow-left-circle"></i>Voltar
+      </button>
       <h1 class="titulo">{{ listagem.titulo }}</h1>
+      <button class="tela-cheia" @click="toggleFullscreen()">
+        <i class="bi bi-fullscreen"></i>tela cheia
+      </button>
     </header>
     <div class="image">
       <img :src="getImageUrl(listagem.imagem)" alt="" />
@@ -80,8 +86,7 @@ function pauseAudio() {
       <p class="texto-dois">{{ listagem.textoSecundario }}</p>
       <div class="audio">
         <button class="btn-audio" @click="playAudio()">
-          <i class="bi bi-volume-up"></i>
-          <p>Escutar</p>
+          <i class="bi bi-volume-down-fill"></i>
         </button>
       </div>
       <footer class="paginator">
@@ -90,7 +95,7 @@ function pauseAudio() {
           :class="paginaSelecionada == 0 ? 'disabled' : ''"
           @click="voltarPagina()"
         >
-          <i class="bi bi-chevron-left"></i>Anterior
+          <i class="bi bi-caret-left-fill"></i>Anterior
         </button>
         <p class="pagina">{{ listagem.pagina }}</p>
         <button
@@ -98,16 +103,10 @@ function pauseAudio() {
           :class="paginaSelecionada == ultimaPagina - 1 ? 'disabled' : ''"
           @click="proximaPagina()"
         >
-          <i class="bi bi-chevron-right"></i>Proximo
+          <i class="bi bi-caret-right-fill"></i>Proximo
         </button>
       </footer>
     </section>
-    <button class="voltar" @click="voltarParaHome()">
-      <i class="bi bi-arrow-left-circle"></i>Voltar
-    </button>
-    <button class="tela-cheia" @click="toggleFullscreen()">
-      <i class="bi bi-fullscreen"></i>tela cheia
-    </button>
   </main>
 </template>
 
@@ -120,12 +119,35 @@ function pauseAudio() {
   flex-direction: column;
   background-color: #f3f3f3;
   .header {
+    width: 95vw;
     margin-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .voltar,
+    .tela-cheia {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: none;
+      border: none;
+      color: #7063ff;
+      font-size: 18px;
+      font-weight: 700;
+      .bi {
+        font-size: 36px;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
     .titulo {
       color: #7063ff;
       text-align: center;
-      font-size: 20px;
-      font-weight: 500;
+      font-size: 32px;
+      font-weight: 700;
+      max-width: calc(100vw / 2);
     }
   }
   .image {
@@ -138,43 +160,43 @@ function pauseAudio() {
   }
   .main-container {
     background-color: #7063ff;
-    padding: 0 16px;
+    padding: 0 42px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     border-radius: 64px 64px 0 0;
     .subtitulo {
-      color: #f3f3f3;
+      color: #fff;
       text-align: center;
-      font-size: 28px;
-      font-family: Nunito;
+      font-size: 32px;
       font-weight: 700;
       margin-top: 40px;
     }
     .texto-um,
     .texto-dois {
-      color: #f3f3f3;
-      text-align: center;
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 19px;
-      letter-spacing: 1px;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -1px;
+      line-height: 1.45;
     }
     .texto-um {
       margin-top: 48px;
+      margin-bottom: 8px;
     }
     .texto-dois {
       margin-top: 16px;
       margin-bottom: 16px;
     }
     .audio {
+      margin-bottom: 12px;
       .btn-audio {
         border: none;
         background: none;
         .bi {
           color: #f3f3f3;
-          font-size: 52px;
+          font-size: 64px;
         }
         p {
           color: #f3f3f3;
@@ -190,14 +212,14 @@ function pauseAudio() {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 12px;
+    gap: 64px;
     .btn-anterior,
     .btn-proximo {
       background: none;
       border: none;
       color: #fff;
       text-align: center;
-      font-size: 16px;
+      font-size: 22px;
       font-weight: 500;
 
       display: flex;
@@ -211,45 +233,9 @@ function pauseAudio() {
     .pagina {
       color: #fff;
       text-align: center;
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 500;
-      margin-bottom: 20px;
-    }
-  }
-  .voltar {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    color: #fff;
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    .bi {
-      font-size: 40px;
-    }
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  .tela-cheia {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: none;
-    border: none;
-    color: #fff;
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    .bi {
-      font-size: 40px;
-    }
-    &:hover {
-      opacity: 0.8;
+      margin-bottom: 30px;
     }
   }
 }
