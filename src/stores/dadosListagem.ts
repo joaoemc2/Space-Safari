@@ -1,6 +1,6 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { type HistoriaType } from '@/types/historiaType'
+import { type HistoriaType } from '@/types/HistoriaType'
 import sistemaSolar from '@/stores/dadosHistorias/sistemaSolar.json'
 import historiaDois from '@/stores/dadosHistorias/historiaDois.json'
 

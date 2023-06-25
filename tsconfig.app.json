@@ -4,9 +4,11 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
+    "src/types/HistoriaType",
     "src/stores/*.json",
     "src/stores/**/*.json",
-    "src/api/*.ts"
+    "src/api/*.ts",
+    "scr/**/*.ts"
   ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
