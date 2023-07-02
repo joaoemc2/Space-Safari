@@ -1,8 +1,13 @@
 export interface HistoriaType {
   titulo: string
+  imagem: string
+
   subTitulo: string
   textoPrincipal: string
   textoSecundario: string | null
-  imagem: string;
+  curiosidades: string[]
+
+  galeria: string[]
+
   pagina: number
 }
