@@ -5,6 +5,8 @@
     "textoPrincipal": "teste text 2",
     "textoSecundario": "Vamos embarcar nessa aventura espacial e aprender sobre o universo!",
     "imagem": "SistemaSolar/010-solar-system.png",
+    "galeria": [],
+    "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "pagina": 1
   },
   {
@@ -13,6 +15,8 @@
     "textoPrincipal": "text teste 2",
     "textoSecundario": null,
     "imagem": "SistemaSolar/009-planet-earth.png",
+    "galeria": [],
+    "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "pagina": 2
   }
 ]
