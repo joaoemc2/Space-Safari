@@ -13,9 +13,11 @@
 </template>
 
 <style lang="scss" scoped>
+@import '@/styles/variables.scss';
+@import '@/styles/coresTema.scss';
 .header-bar {
   width: 100%;
-  background-color: #4f44c7;
+  background-color: $cor-secundaria;
   margin-bottom: 16px;
 }
 .header {
@@ -27,7 +29,7 @@
   .menu {
     background: none;
     border: none;
-    color: #f3f3f3;
+    color: $cor-branca;
     font-size: 32px;
   }
   .pesquisar {
@@ -35,11 +37,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f3f3f3;
+    background-color: $cor-branca;
     border-radius: 100px;
     padding: 0 16px;
     .bi-search {
-      color: #7063ff;
+      color: $cor-secundaria;
       font-size: 20px;
       margin-right: 12px;
     }
@@ -47,11 +49,11 @@
       background: none;
       border: none;
       width: 100%;
-      color: #202020;
+      color: $cor-preta;
       box-shadow: 0 0 0 0;
       outline: 0;
       &::placeholder {
-        color: #202020;
+        color: $cor-preta;
         opacity: 0.6;
         font-size: 16px;
       }
