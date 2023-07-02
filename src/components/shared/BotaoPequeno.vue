@@ -13,7 +13,7 @@ const prop = defineProps<{
 <style lang="scss" scoped>
 @import '@/styles/variables.scss';
 .btn-container {
-  padding: 12px 32px;
+  padding: 16px 32px;
   border: none;
   border-radius: 32px;
   background-color: $cor-primaria;
