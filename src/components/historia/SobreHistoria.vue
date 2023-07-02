@@ -35,7 +35,7 @@ const prop = defineProps<{
 
 .sobre-container {
   border-radius: 30px;
-  background: #7063ff;
+  background: $cor-primaria;
   padding: 16px 16px 32px;
   .topo {
     .titulo {
