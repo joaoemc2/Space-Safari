@@ -2,11 +2,12 @@
 const prop = defineProps<{
   texto: string
   icone: string
+  corTema: string
 }>()
 </script>
 
 <template>
-  <button class="btn-container">
+  <button :class="prop.corTema" class="btn-container">
     <i :class="`bi bi-${prop.icone}`"></i>
     <p class="btn-texto">{{ prop.texto }}</p>
   </button>
@@ -14,6 +15,7 @@ const prop = defineProps<{
 
 <style lang="scss" scoped>
 @import '@/styles/variables.scss';
+@import '@/styles/coresTema.scss';
 .btn-container {
   border: none;
   background: none;
@@ -27,13 +29,12 @@ const prop = defineProps<{
   }
 
   .btn-texto {
-    color: $cor-amarela;
     font-size: 16px;
-    font-weight: $peso-bold;
+    font-weight: $peso-super-bold;
   }
   i {
     font-size: 38px;
-    color: $cor-amarela;
+    -webkit-text-stroke-width: 1px;
   }
 }
 </style>

@@ -11,7 +11,8 @@ const dadosCards = ref([
     passosConcluidos: 2,
     passosTotais: 5,
     componente: 0,
-    imagem: 'Home/solar-system.png'
+    imagem: 'Home/solar-system.png',
+    corTema: 'amarelo'
   },
   {
     titulo: 'Descobrindo o Universo',
@@ -20,7 +21,8 @@ const dadosCards = ref([
     passosConcluidos: 0,
     passosTotais: 7,
     componente: 1,
-    imagem: 'Home/space-shuttle.png'
+    imagem: 'Home/space-shuttle.png',
+    corTema: 'vermelho'
   },
   {
     titulo: 'Em Busca das Estrelas',
@@ -29,7 +31,8 @@ const dadosCards = ref([
     passosConcluidos: 0,
     passosTotais: 8,
     componente: 2,
-    imagem: 'Home/falling-star.png'
+    imagem: 'Home/falling-star.png',
+    corTema: 'azul'
   }
 ])
 </script>
@@ -47,6 +50,7 @@ const dadosCards = ref([
           :passos-totais="dadosCard.passosTotais"
           :redirect="dadosCard.componente"
           :imagem="dadosCard.imagem"
+          :tema="dadosCard.corTema"
         />
       </li>
     </ul>

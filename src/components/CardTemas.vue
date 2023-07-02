@@ -13,6 +13,7 @@ const prop = defineProps<{
   passosTotais: number
   redirect: number
   imagem: string
+  tema: string
 }>()
 
 function redirecionar() {
@@ -29,14 +30,14 @@ const getImageUrl = (name: string) => {
   <main class="card-container">
     <div class="topo">
       <div class="header">
-        <h2>{{ titulo }}</h2>
+        <h2 :class="prop.tema">{{ titulo }}</h2>
         <img class="imagem" :src="getImageUrl(imagem)" />
       </div>
     </div>
     <p class="texto">{{ texto }}</p>
     <div class="base">
-      <BotaoIcone :icone="'play-circle-fill'" :texto="'Vamos lá!'" @click="redirecionar()" />
-      <div class="passos">
+      <BotaoIcone :cor="prop.tema" :icone="'play-circle-fill'" :texto="'Vamos lá!'" @click="redirecionar()" />
+      <div class="passos" :class="prop.tema">
         <p>{{ passosConcluidos }} de {{ passosTotais }}</p>
         <p>Passos Concluídos</p>
       </div>
@@ -46,6 +47,7 @@ const getImageUrl = (name: string) => {
 
 <style lang="scss" scoped>
 @import '@/styles/variables.scss';
+@import '@/styles/coresTema.scss';
 .card-container {
   display: flex;
   flex-direction: column;
@@ -62,11 +64,11 @@ const getImageUrl = (name: string) => {
       display: flex;
       justify-content: space-between;
       h2 {
-        color: $cor-amarela;
         font-size: $fonte-subtitulo;
         font-weight: $peso-bold;
         width: auto;
         max-width: 220px;
+        background: none;
       }
       .imagem {
         width: 72px;
@@ -85,8 +87,8 @@ const getImageUrl = (name: string) => {
     align-items: center;
     width: 100%;
     .passos {
+      background: none;
       p {
-        color: $cor-amarela;
         font-size: $fonte-media;
         font-weight: $peso-bold;
         text-align: center;
