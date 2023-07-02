@@ -7,56 +7,75 @@ const dadosCards = ref([
   {
     titulo: 'Desbravando os Planetas',
     texto:
-      'O Sistema Solar é uma grande família de planetas e outras coisas que giram ao redor do Sol, como se estivessem dançando no espaço!',
-    porcentagem: 0,
+      'O Sistema Solar é uma grande família de planetas e outras coisas que giram ao redor do Sol.',
+    passosConcluidos: 2,
+    passosTotais: 5,
     componente: 0,
-    textoBotao: 'Iniciar',
     imagem: 'Home/solar-system.png'
   },
   {
     titulo: 'Descobrindo o Universo',
     texto:
-      'A astronomia é como um jogo de descobertas no céu, onde podemos aprender sobre estrelas brilhantes, planetas coloridos e até mesmo sobre galáxias distantes.',
-    porcentagem: 90,
+      'Na astronomia podemos aprender sobre estrelas brilhantes, planetas coloridos e até mesmo sobre galáxias distantes.',
+    passosConcluidos: 0,
+    passosTotais: 7,
     componente: 1,
-    textoBotao: 'Continuar',
     imagem: 'Home/space-shuttle.png'
   },
   {
     titulo: 'Em Busca das Estrelas',
     texto:
       'As estrelas são como pequenas luzes mágicas no céu noturno, brilhando e nos contando histórias secretas enquanto fazem parte de constelações encantadoras.',
-    porcentagem: 12,
+    passosConcluidos: 0,
+    passosTotais: 8,
     componente: 2,
-    textoBotao: 'Continuar',
     imagem: 'Home/falling-star.png'
   }
 ])
 </script>
 
 <template>
-  <main class="home-view">
+  <main class="home-container">
     <HeaderBar />
-    <CardTemas
-      v-for="(dadosCard, i) in dadosCards"
-      :key="i"
-      :titulo="dadosCard.titulo"
-      :texto="dadosCard.texto"
-      :porcentagem-concluida="dadosCard.porcentagem"
-      :redirect="dadosCard.componente"
-      :textoBotao="dadosCard.textoBotao"
-      :imagem="dadosCard.imagem"
-    />
+    <h1 class="titulo">Vamos Começar!</h1>
+    <ul class="cards">
+      <li class="card" v-for="(dadosCard, i) in dadosCards" :key="i">
+        <CardTemas
+          :titulo="dadosCard.titulo"
+          :texto="dadosCard.texto"
+          :passos-concluidos="dadosCard.passosConcluidos"
+          :passos-totais="dadosCard.passosTotais"
+          :redirect="dadosCard.componente"
+          :imagem="dadosCard.imagem"
+        />
+      </li>
+    </ul>
   </main>
 </template>
 
-<style language="scss" scoped>
-.home-view {
+<style lang="scss" scoped>
+@import '@/styles/variables.scss';
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  background-color: #7063ff;
-  height: calc(100vh);
+  background-color: $cor-primaria;
+  min-height: 100vh;
+  height: auto;
+  .titulo {
+    text-align: left;
+    width: 100%;
+    margin-left: 42px;
+    margin-bottom: 22px;
+    color: $cor-branca;
+    font-size: $fonte-subtitulo;
+    font-weight: $peso-bold;
+  }
+  .cards {
+    padding: 0px 22px;
+    .card {
+      margin-bottom: 20px;
+    }
+  }
 }
 </style>
