@@ -142,6 +142,7 @@ table {
 
 * {
   font-family: 'Nunito', sans-serif;
+  line-height: 140% !important;
 }
 
 .btn-one {
