@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
+import BotaoPequeno from '@/components/shared/BotaoPequeno.vue'
 
 const router = useRouter()
 
@@ -13,116 +14,89 @@ function login() {
 </script>
 
 <template>
-  <main>
-    <div class="logo">
-      <img class="image" src="@/assets/image/logo.png" alt="" />
-      <h1>Space Safari</h1>
-    </div>
-    <div class="texto-container">
-      <p>Explore o espaço e desvende os mistérios do cosmos enquanto se diverte aprendendo!</p>
-    </div>
-    <div class="btn-container">
-      <button class="btn-google" @click="login()">
-        <i class="bi bi-google"></i>Login com Google
-      </button>
-      <button class="btn-sem-login" @click="irParaHome()">Entrar sem login</button>
-    </div>
-    <footer class="footer">
-      <div class="social-icons">
-        <i class="bi bi-instagram"></i>
-        <i class="bi bi-linkedin"></i>
-      </div>
-      <p>Space Safari - 2023</p>
-    </footer>
+  <main class="login-container">
+    <section class="topo-container">
+      <img class="imagem" src="@/assets/image/logo.png" alt="" />
+    </section>
+    <section class="base-container">
+      <h1 class="titulo">Space Safari</h1>
+      <p class="texto">
+        Embarque em uma incrível expedição pelo universo, explorando estrelas, planetas e segredos
+        cósmicos.
+      </p>
+      <BotaoPequeno @click="irParaHome()" :texto="'Vamos lá'" />
+      <footer class="footer">
+        <div class="icones">
+          <i class="bi bi-instagram"></i>
+          <i class="bi bi-linkedin"></i>
+        </div>
+        <p class="footer-texto">Space Safari v 0.1.0 - 2023</p>
+      </footer>
+    </section>
   </main>
 </template>
 
 <style lang="scss" scoped>
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: #7063ff;
-  gap: 42px;
-  .logo {
+@import '@/styles/variables.scss';
+.login-container {
+  width: 100vw;
+  height: 100vh;
+  background-color: $cor-primaria;
+  .topo-container {
+    height: 40%;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    .image {
-      margin-top: 64px;
-      width: 70%;
-    }
-    h1 {
-      text-align: center;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 27px;
-      color: #f3f3f3;
-      margin-bottom: 16px;
+    .imagem {
+      width: 230px;
     }
   }
-  .texto-container {
-    p {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 20px;
-      text-align: center;
-      color: #f3f3f3;
-      padding: 30px;
-    }
-  }
-  .btn-container {
+
+  .base-container {
+    width: 100%;
+    height: 60%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    gap: 12px;
-    button {
-      padding: 12px;
-      width: 220px;
-      font-size: 14px;
-      border: none;
-      border-radius: 8px;
-    }
-    .btn-google {
-      background: #f3f3f3;
+    box-sizing: border-box;
+    padding: 96px 22px 16px;
+    background-color: $cor-branca;
+    clip-path: ellipse(100% 75% at 50% 80%);
+    /* clip-path é usado para criar a curvatura no topo do background. Neste exemplo, estamos usando a forma de uma elipse (ellipse) com uma proporção de 100% de largura e 75% de altura (ellipse(100% 75% at 50% 0%)). A parte at 50% 0% define o ponto de origem da elipse. */
+    .titulo {
       color: #7063ff;
+      text-align: center;
+      font-size: $fonte-titulo;
+      font-weight: $peso-bold;
+    }
+
+    .texto {
+      color: $cor-preta;
+      text-align: center;
+      font-size: $fonte-subtitulo;
+      font-weight: $peso-normal;
+    }
+  }
+
+  .footer {
+    .icones {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 12px;
-    }
-    .btn-sem-login {
-      border: 1px solid #f3f3f3;
-      background: none;
-      color: #f3f3f3;
-    }
-  }
-  .footer {
-    margin-bottom: 8px;
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 42px;
-      margin-bottom: 18px;
-
+      gap: 32px;
       i {
-        font-size: 22px;
-        color: #f3f3f3;
+        font-size: 32px;
+        color: $cor-preta;
       }
     }
-    p {
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 15px;
-      color: #f3f3f3;
+
+    .footer-texto {
+      margin-top: 4px;
+      color: cor-preta;
       text-align: center;
+      font-size: $fonte-pequena;
+      font-weight: $peso-normal;
     }
   }
 }
