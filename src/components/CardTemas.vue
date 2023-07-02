@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
 import { dadosListagem } from '@/stores/dadosListagem'
+import BotaoIcone from './shared/BotaoIcone.vue'
 
 const router = useRouter()
 const store = dadosListagem()
@@ -8,9 +9,9 @@ const store = dadosListagem()
 const prop = defineProps<{
   titulo: string
   texto: string
-  porcentagemConcluida: number
+  passosConcluidos: number
+  passosTotais: number
   redirect: number
-  textoBotao: string
   imagem: string
 }>()
 
@@ -25,71 +26,71 @@ const getImageUrl = (name: string) => {
 </script>
 
 <template>
-  <main>
-    <div class="section-um">
-      <div class="texto-container">
+  <main class="card-container">
+    <div class="topo">
+      <div class="header">
         <h2>{{ titulo }}</h2>
-        <p>{{ texto }}</p>
+        <img class="imagem" :src="getImageUrl(imagem)" />
       </div>
-      <img class="imagem" :src="getImageUrl(imagem)" />
     </div>
-    <div class="section-dois">
-      <button class="btn-two" @click="redirecionar()">{{ textoBotao }}</button>
-      <p>{{ porcentagemConcluida }}% Concluído</p>
+    <p class="texto">{{ texto }}</p>
+    <div class="base">
+      <BotaoIcone :icone="'play-circle-fill'" :texto="'Vamos lá!'" @click="redirecionar()" />
+      <div class="passos">
+        <p>{{ passosConcluidos }} de {{ passosTotais }}</p>
+        <p>Passos Concluídos</p>
+      </div>
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
-main {
+@import '@/styles/variables.scss';
+.card-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding: 16px;
   padding-top: 20px;
-  gap: 18px;
-  background: #f3f3f3;
+  gap: 12px;
+  background: $cor-branca;
   border-radius: 12px;
   width: fit-content;
   height: fit-content;
-  .section-um {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 17px;
-    color: #ffffff;
-
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    .texto-container {
-      max-width: 242px;
+  .topo {
+    .header {
+      display: flex;
+      justify-content: space-between;
       h2 {
-        margin-bottom: 12px;
-        color: #7063ff;
-        font-size: 18px;
-        font-weight: 600;
+        color: $cor-amarela;
+        font-size: $fonte-subtitulo;
+        font-weight: $peso-bold;
+        width: auto;
+        max-width: 220px;
       }
-      p {
-        color: #2b2b2b;
-        font-size: 14px;
-        font-weight: 400;
+      .imagem {
+        width: 72px;
+        height: 72px;
       }
-    }
-    .imagem {
-      width: 64px;
-      height: 64px;
     }
   }
-  .section-dois {
+  .texto {
+    color: $cor-preta;
+    font-size: $fonte-padrao;
+    font-weight: $peso-bold;
+  }
+  .base {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    p {
-      color: #7063ff;
-      font-size: 13px;
-      font-weight: 400;
+    .passos {
+      p {
+        color: $cor-amarela;
+        font-size: $fonte-media;
+        font-weight: $peso-bold;
+        text-align: center;
+      }
     }
   }
 }
