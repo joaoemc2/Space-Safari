@@ -1,3 +1,5 @@
+import { type PerguntaType } from '@/types/PerguntaType'
+
 export interface HistoriaType {
   titulo: string
   imagem: string
@@ -10,4 +12,6 @@ export interface HistoriaType {
   galeria: string[]
 
   pagina: number
+
+  perguntas?: PerguntaType[]
 }

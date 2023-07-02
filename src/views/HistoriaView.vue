@@ -6,6 +6,7 @@ import { useRouter } from 'vue-router'
 import BotaoIconeRow from '@/components/shared/BotaoIconeRow.vue'
 import SobreHistoria from '@/components/historia/SobreHistoria.vue'
 import GaleriaImagens from '@/components/historia/GaleriaImagens.vue'
+import QuizHistoria from '@/components/historia/QuizHistoria.vue'
 
 const router = useRouter()
 const store = dadosListagem()
@@ -76,6 +77,7 @@ function getImageUrl(name: string) {
         class="btn-home"
         :icone="'house'"
         :texto="'Inicio'"
+        :cor-tema="'primaria'"
         @click="voltarParaHome()"
       />
       <h1>{{ listagem.titulo }}</h1>
@@ -90,6 +92,12 @@ function getImageUrl(name: string) {
       :curiosidades="listagem.curiosidades"
     />
     <GaleriaImagens :imagens="listagem.galeria" />
+    <ul>
+      <h3 class="titulo">Quiz</h3>
+      <li v-for="(pergunta, i) in listagem.perguntas" :key="i">
+        <QuizHistoria :quiz="pergunta" />
+      </li>
+    </ul>
   </main>
 </template>
 
@@ -124,6 +132,13 @@ function getImageUrl(name: string) {
     img {
       width: 230px;
     }
+  }
+  .titulo {
+    font-size: $fonte-titulo;
+    text-align: center;
+    color: $cor-primaria;
+    font-weight: $peso-bold;
+    margin-bottom: 22px;
   }
 }
 </style>

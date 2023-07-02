@@ -16,6 +16,28 @@
       "SistemaSolar/galeria/corona.png",
       "SistemaSolar/galeria/planetas.png"
     ],
+    "perguntas": [
+      {
+        "pergunta": "teste pergunta 1, alternativa correta 2",
+        "alternativas": ["Lua", "Sol", "Marte"],
+        "respostaCorreta": 1,
+        "callback": [
+          "A Lua não é a resposta correta",
+          "O Sol é a resposta correta",
+          "Marte não é a resposta correta"
+        ]
+      },
+      {
+        "pergunta": "teste pergunta 2 alternativa correta 1",
+        "alternativas": ["Hidrogênio", "Helio", "Oxigênio"],
+        "respostaCorreta": 0,
+        "callback": [
+          "Hidrogênio é a resposta correta",
+          "Helio não é a resposta correta",
+          "Oxigênio não é a resposta correta"
+        ]
+      }
+    ],
     "pagina": 1
   },
   {
