@@ -62,10 +62,13 @@ const dadosCards = ref([
   background-color: $cor-primaria;
   min-height: 100vh;
   height: auto;
+  width: 100vw;
+  padding-bottom: 32px;
   .titulo {
     text-align: left;
     width: 100%;
-    margin-left: 42px;
+    padding-left: 22px;
+    box-sizing: border-box;
     margin-bottom: 22px;
     color: $cor-branca;
     font-size: $fonte-subtitulo;
