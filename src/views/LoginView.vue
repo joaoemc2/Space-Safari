@@ -65,7 +65,7 @@ function login() {
     clip-path: ellipse(100% 75% at 50% 80%);
     /* clip-path é usado para criar a curvatura no topo do background. Neste exemplo, estamos usando a forma de uma elipse (ellipse) com uma proporção de 100% de largura e 75% de altura (ellipse(100% 75% at 50% 0%)). A parte at 50% 0% define o ponto de origem da elipse. */
     .titulo {
-      color: #7063ff;
+      color: $cor-primaria;
       text-align: center;
       font-size: $fonte-titulo;
       font-weight: $peso-bold;
