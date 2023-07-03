@@ -8,15 +8,30 @@ const prop = defineProps<{
 }>()
 
 const alternativaSelecionada = ref<number>()
+const mostarAlerta = ref<boolean>(false)
+const mostarCallback = ref<boolean>(false)
+const respostaCorreta = ref<boolean>()
+const bloquearResposta = ref<boolean>(false)
 
 function selecionarAlternativa(questao: number) {
-  alternativaSelecionada.value = questao
-  console.log(alternativaSelecionada.value)
+  if (!bloquearResposta.value) {
+    mostarAlerta.value = false
+    alternativaSelecionada.value = questao
+  }
 }
 
 function responderAlternativa() {
   if (alternativaSelecionada.value != null) {
-    console.log(alternativaSelecionada.value)
+    mostarAlerta.value = false
+    mostarCallback.value = true
+    bloquearResposta.value = true
+    if (alternativaSelecionada.value === prop.quiz.respostaCorreta) {
+      respostaCorreta.value = true
+    } else {
+      respostaCorreta.value = false
+    }
+  } else {
+    mostarAlerta.value = true
   }
 }
 </script>
@@ -36,7 +51,11 @@ function responderAlternativa() {
         <i class="bi bi-check-circle-fill"></i>
       </li>
     </ul>
-    <BotaoPequeno :texto="'Responder'" @click="responderAlternativa()" />
+    <p v-if="mostarAlerta" class="alerta">Selecione uma resposta</p>
+    <BotaoPequeno v-if="!mostarCallback" :texto="'Responder'" @click="responderAlternativa()" />
+    <p v-else class="resposta" :class="!respostaCorreta ? 'resposta-incorreta' : ''">
+      {{ prop.quiz.callback[alternativaSelecionada!] }}
+    </p>
   </main>
 </template>
 
@@ -61,7 +80,7 @@ function responderAlternativa() {
   align-items: center;
 
   .pergunta {
-    font-size: $fonte-padrao;
+    font-size: $fonte-subtitulo;
     text-align: center;
     color: $cor-primaria;
     font-weight: $peso-bold;
@@ -89,13 +108,30 @@ function responderAlternativa() {
       p {
         font-size: $fonte-padrao;
         font-weight: $peso-super-bold;
-        opacity: 0.8;
+        opacity: 0.9;
       }
       i {
         font-size: 24px;
-        opacity: 0.5;
+        opacity: 0.3;
       }
     }
+  }
+  .alerta {
+    font-size: $fonte-padrao;
+    text-align: center;
+    color: $cor-vermelha;
+    font-weight: $peso-bold;
+    margin-bottom: 18px;
+  }
+  .resposta {
+    font-size: $fonte-padrao;
+    text-align: center;
+    color: $cor-verde;
+    font-weight: $peso-bold;
+    margin-bottom: 18px;
+  }
+  .resposta-incorreta {
+    color: $cor-vermelha;
   }
 }
 </style>
