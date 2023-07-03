@@ -1,15 +1,15 @@
 [
   {
-    "titulo": "Desbravando os Planetas",
-    "subTitulo": "Sistema Solar",
-    "textoPrincipal": "Vamos explorar os planetas do Sistema Solar juntos! Descubra características incríveis, desde planetas quentes até gigantes com anéis.",
-    "textoSecundario": "Vamos embarcar nessa aventura espacial e aprender sobre o universo!",
+    "titulo": "Desbravando o Sistema Solar",
+    "subTitulo": "O Sol",
+    "textoPrincipal": "O Sol é uma estrela gigante e brilhante que está no centro do nosso sistema solar, ele nos fornece luz e calor para vivermos na Terra.",
+    "textoSecundario": "O Sol é feito principalmente de gás e é tão grande que poderíamos colocar mais de um milhão de planetas Terra dentro dele!   ",
     "curiosidades": [
-      "1 - O Sol é muito, muito quente! Ele é tão quente que você não poderia chegar perto dele. É como uma grande bola de fogo que nos dá luz e calor.",
-      "2 - Existem muitas estrelas no céu noturno, mas o Sol é a estrela mais próxima de nós. É tão brilhante que não podemos olhar diretamente para ele sem nos machucar. Por isso, nunca devemos olhar diretamente para o Sol sem proteção especial!",
-      "3 - O sistema solar é muito grande, mas comparado com o universo, é apenas um pontinho. O universo é tão vasto e misterioso que os cientistas ainda estão explorando e descobrindo coisas novas sobre ele."
+      "1 - O Sol é tão grande que caberiam mais de um milhão de planetas Terra dentro dele!",
+      "2 - O Sol é tão brilhante que não podemos olhar diretamente para ele sem nos machucar. Por isso, nunca devemos olhar diretamente para o Sol sem proteção especial!",
+      "3 - O Sol é uma estrela muito quente, com temperaturas que podem chegar a mais de 15 milhões de graus Celsius!"
     ],
-    "imagem": "SistemaSolar/010-solar-system.png",
+    "imagem": "SistemaSolar/014-sun.png",
     "galeria": [
       "SistemaSolar/galeria/sol.png",
       "SistemaSolar/galeria/hubble.png",
@@ -18,126 +18,110 @@
     ],
     "perguntas": [
       {
-        "pergunta": "teste pergunta 1, alternativa correta 2",
-        "alternativas": ["Lua", "Sol", "Marte"],
+        "pergunta": "Qual é o nome da estrela brilhante que nos fornece luz e calor?",
+        "alternativas": ["Terra", "Sol", "Lua"],
         "respostaCorreta": 1,
         "callback": [
-          "A Lua não é a resposta correta",
-          "O Sol é a resposta correta",
-          "Marte não é a resposta correta"
+          "A Terra é o planeta que vivemos, não é uma estrela.",
+          "Resposta correta, parabéns!",
+          "A Lua e nosso satélite natural, ela não é uma estrela."
         ]
       },
       {
-        "pergunta": "teste pergunta 2 alternativa correta 1",
-        "alternativas": ["Hidrogênio", "Helio", "Oxigênio"],
+        "pergunta": "Qual é a temperatura do Sol?",
+        "alternativas": [
+          "15 milhões graus Celsius",
+          "15 mil de graus Celsius",
+          "5 mil graus Celsius"
+        ],
         "respostaCorreta": 0,
         "callback": [
-          "Hidrogênio é a resposta correta",
-          "Helio não é a resposta correta",
-          "Oxigênio não é a resposta correta"
+          "Resposta correta, parabéns!",
+          "O sol é mais quente que 15 mil graus Celsius, na verdade ele é quente a 15 milhões de graus Celsius.",
+          "O sol é bem mais quente que 5 mil graus Celsius, na verdade ele é quente a 15 milhões de graus Celsius."
         ]
       }
     ],
     "pagina": 1
   },
   {
-    "titulo": "Desbravando os Planetas",
-    "subTitulo": "Sistema Solar",
-    "textoPrincipal": "O Sistema Solar é uma grande família de planetas e outras coisas que giram ao redor do Sol, como se estivessem dançando no espaço!",
-    "textoSecundario": null,
-    "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/009-planet-earth.png",
-    "galeria": [],
-    "pagina": 2
-  },
-  {
-    "titulo": "Desbravando os Planetas",
-    "subTitulo": "Sistema Solar",
-    "textoPrincipal": "Nessa fabulosa dança cósmica, o Sol brilha intensamente no centro, enquanto ao seu redor giram os planetas:",
-    "textoSecundario": "Mercúrio, Vênus, Terra, Marte, Júpiter, Saturno, Urano e Netuno.",
-    "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/014-sun.png",
-    "galeria": [],
-    "pagina": 3
-  },
-  {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Mercúrio",
     "textoPrincipal": "Mercúrio é o planeta mais próximo do Sol. Ele é bem pequeno e rochoso. Mercúrio é muito quente durante o dia e muito frio durante a noite.",
     "textoSecundario": "Ele não tem atmosfera, o que significa que não tem ar para respirar.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/004-mercury.png",
     "galeria": [],
-    "pagina": 4
+    "pagina": 2
   },
   {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Vênus",
     "textoPrincipal": "Vênus é conhecido como o 'Planeta Vizinho da Terra'. Ele é bem brilhante no céu e tem uma atmosfera muito densa, cheia de nuvens.",
     "textoSecundario": "Vênus é o planeta mais quente do Sistema Solar, com uma temperatura super quente o tempo todo.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/003-venus.png",
     "galeria": [],
-    "pagina": 5
+    "pagina": 3
   },
   {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Terra",
     "textoPrincipal": "A Terra é o nosso planeta! É muito especial porque é o único planeta conhecido que tem vida. Nós vivemos aqui!",
     "textoSecundario": "A Terra tem água, ar para respirar e uma variedade incrível de plantas e animais.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/009-planet-earth.png",
     "galeria": [],
-    "pagina": 6
+    "pagina": 4
   },
   {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Marte",
     "textoPrincipal": "Marte é chamado de 'Planeta Vermelho' porque sua superfície tem uma cor avermelhada. É um planeta rochoso e tem montanhas e vales.",
     "textoSecundario": "Marte tem uma atmosfera muito fina e é conhecido por suas calotas polares de gelo.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/005-mars.png",
     "galeria": [],
-    "pagina": 7
+    "pagina": 5
   },
   {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Júpiter",
     "textoPrincipal": "Júpiter é o maior planeta do Sistema Solar. Ele é tão grande que poderia caber todos os outros planetas dentro dele! Júpiter é feito principalmente de gás e não tem uma superfície sólida.",
     "textoSecundario": "Ele tem listras coloridas e uma grande mancha vermelha chamada de 'Grande Mancha Vermelha'.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/001-jupiter.png",
     "galeria": [],
-    "pagina": 8
+    "pagina": 6
   },
   {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Saturno",
     "textoPrincipal": "Saturno é famoso por seus anéis bonitos! Ele também é feito principalmente de gás e tem uma atmosfera com nuvens.",
     "textoSecundario": "Os anéis de Saturno são feitos de pedaços de gelo e rocha. É um planeta muito interessante de se olhar!",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/006-saturn.png",
     "galeria": [],
-    "pagina": 9
+    "pagina": 7
   },
   {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Urano",
     "textoPrincipal": "Urano é um planeta azul e gelado. Ele também tem anéis, mas eles são mais finos e menos visíveis do que os de Saturno.",
     "textoSecundario": "Urano é conhecido por ser inclinado de lado, o que significa que ele 'deita' enquanto gira.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/007-uranus.png",
     "galeria": [],
-    "pagina": 10
+    "pagina": 8
   },
   {
-    "titulo": "Desbravando os Planetas",
+    "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Netuno",
     "textoPrincipal": "Netuno é um planeta azul escuro e frio. Ele é parecido com Urano, mas tem uma cor diferente.",
     "textoSecundario": "Netuno é conhecido por suas tempestades poderosas e ventos fortes. Ele também tem anéis, assim como Júpiter e Saturno.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
     "imagem": "SistemaSolar/002-neptune.png",
     "galeria": [],
-    "pagina": 11
+    "pagina": 9
   }
 ]
