@@ -7,6 +7,7 @@ import BotaoIconeRow from '@/components/shared/BotaoIconeRow.vue'
 import SobreHistoria from '@/components/historia/SobreHistoria.vue'
 import GaleriaImagens from '@/components/historia/GaleriaImagens.vue'
 import QuizHistoria from '@/components/historia/QuizHistoria.vue'
+import BotaoPequeno from '@/components/shared/BotaoPequeno.vue'
 
 const router = useRouter()
 const store = dadosListagem()
@@ -40,20 +41,25 @@ function toggleFullscreen() {
 
 function proximaPagina() {
   if (paginaSelecionada.value + 1 < ultimaPagina.value) {
-    // pauseAudio()
     paginaSelecionada.value++
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 }
 
 function voltarPagina() {
   if (paginaSelecionada.value > 0) {
-    // pauseAudio()
     paginaSelecionada.value--
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
   }
 }
 
 function voltarParaHome() {
-  // pauseAudio()
   router.push('home')
 }
 
@@ -98,6 +104,10 @@ function getImageUrl(name: string) {
         <QuizHistoria :quiz="pergunta" />
       </li>
     </ul>
+    <section class="paginator">
+      <BotaoPequeno :texto="'Voltar'" :inverter="true" @click="voltarPagina()" />
+      <BotaoPequeno :texto="'Avançar'" :inverter="true" @click="proximaPagina()" />
+    </section>
   </main>
 </template>
 
@@ -139,6 +149,13 @@ function getImageUrl(name: string) {
     color: $cor-primaria;
     font-weight: $peso-bold;
     margin-bottom: 22px;
+  }
+  .paginator {
+    display: flex;
+    background-color: $cor-primaria;
+    border-radius: 30px 30px 0px 0px;
+    padding: 38px 16px;
+    justify-content: space-between;
   }
 }
 </style>
