@@ -9,12 +9,12 @@
       "2 - O Sol é tão brilhante que não podemos olhar diretamente para ele sem nos machucar. Por isso, nunca devemos olhar diretamente para o Sol sem proteção especial!",
       "3 - O Sol é uma estrela muito quente, com temperaturas que podem chegar a mais de 15 milhões de graus Celsius!"
     ],
-    "imagem": "SistemaSolar/014-sun.png",
+    "imagem": "sistemaSolar/014-sun.png",
     "galeria": [
-      "SistemaSolar/galeria/sol.png",
-      "SistemaSolar/galeria/hubble.png",
-      "SistemaSolar/galeria/corona.png",
-      "SistemaSolar/galeria/planetas.png"
+      "sistemaSolar/galeria/sol/sol.png",
+      "sistemaSolar/galeria/sol/hubble.png",
+      "sistemaSolar/galeria/sol/corona.png",
+      "sistemaSolar/galeria/sol/planetas.png"
     ],
     "perguntas": [
       {
@@ -45,22 +45,48 @@
     "pagina": 1
   },
   {
-    "titulo": "Desbravando o Sistema Solar",
-    "subTitulo": "Mercúrio",
-    "textoPrincipal": "Mercúrio é o planeta mais próximo do Sol. Ele é bem pequeno e rochoso. Mercúrio é muito quente durante o dia e muito frio durante a noite.",
-    "textoSecundario": "Ele não tem atmosfera, o que significa que não tem ar para respirar.",
-    "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/004-mercury.png",
+    "subTitulo": "O Planeta Mercúrio",
+    "textoPrincipal": "Mercúrio é o planeta mais próximo do Sol e também o menor do nosso sistema solar.",
+    "textoSecundario": "Ele é coberto por crateras e tem uma superfície cheia de montanhas e vales.",
+    "curiosidades": [
+      "1 - Mercúrio é tão quente durante o dia que seria difícil sobreviver lá. À noite, porém, faz muito frio!",
+      "2 - Ele é o planeta mais rápido, completando uma volta ao redor do Sol em apenas 88 dias terrestres.",
+      "3 - Mercúrio não tem atmosfera, o que significa que não tem ar para respirarmos."
+    ],
+    "imagem": "sistemaSolar/004-mercury.png",
     "galeria": [],
+    "perguntas": [
+      {
+        "pergunta": "Qual é o planeta mais próximo do Sol?",
+        "alternativas": ["Vênus", "Terra", "Mercúrio"],
+        "respostaCorreta": 2,
+        "callback": [
+          "Vênus é um planeta próximo, mas não o mais próximo do Sol.",
+          "Não é a Terra, mas você está se aproximando! O planeta mais próximo do Sol é Mercúrio.",
+          "Parabéns! Mercúrio é o planeta mais próximo do Sol."
+        ]
+      },
+      {
+        "pergunta": "Por que não podemos respirar em Mercúrio?",
+        "alternativas": ["Não há ar lá", "Faz muito frio", "Tem muitas montanhas"],
+        "respostaCorreta": 0,
+        "callback": [
+          "Exatamente! Mercúrio não tem atmosfera, por isso não há ar para respirarmos.",
+          "O frio em Mercúrio é extremo, mas a falta de atmosfera é a razão principal para não podermos respirar lá.",
+          "As montanhas em Mercúrio não afetam a respiração, mas a falta de atmosfera sim."
+        ]
+      }
+    ],
     "pagina": 2
   },
+
   {
     "titulo": "Desbravando o Sistema Solar",
     "subTitulo": "Vênus",
     "textoPrincipal": "Vênus é conhecido como o 'Planeta Vizinho da Terra'. Ele é bem brilhante no céu e tem uma atmosfera muito densa, cheia de nuvens.",
     "textoSecundario": "Vênus é o planeta mais quente do Sistema Solar, com uma temperatura super quente o tempo todo.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/003-venus.png",
+    "imagem": "sistemaSolar/003-venus.png",
     "galeria": [],
     "pagina": 3
   },
@@ -70,7 +96,7 @@
     "textoPrincipal": "A Terra é o nosso planeta! É muito especial porque é o único planeta conhecido que tem vida. Nós vivemos aqui!",
     "textoSecundario": "A Terra tem água, ar para respirar e uma variedade incrível de plantas e animais.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/009-planet-earth.png",
+    "imagem": "sistemaSolar/009-planet-earth.png",
     "galeria": [],
     "pagina": 4
   },
@@ -80,7 +106,7 @@
     "textoPrincipal": "Marte é chamado de 'Planeta Vermelho' porque sua superfície tem uma cor avermelhada. É um planeta rochoso e tem montanhas e vales.",
     "textoSecundario": "Marte tem uma atmosfera muito fina e é conhecido por suas calotas polares de gelo.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/005-mars.png",
+    "imagem": "sistemaSolar/005-mars.png",
     "galeria": [],
     "pagina": 5
   },
@@ -90,7 +116,7 @@
     "textoPrincipal": "Júpiter é o maior planeta do Sistema Solar. Ele é tão grande que poderia caber todos os outros planetas dentro dele! Júpiter é feito principalmente de gás e não tem uma superfície sólida.",
     "textoSecundario": "Ele tem listras coloridas e uma grande mancha vermelha chamada de 'Grande Mancha Vermelha'.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/001-jupiter.png",
+    "imagem": "sistemaSolar/001-jupiter.png",
     "galeria": [],
     "pagina": 6
   },
@@ -100,7 +126,7 @@
     "textoPrincipal": "Saturno é famoso por seus anéis bonitos! Ele também é feito principalmente de gás e tem uma atmosfera com nuvens.",
     "textoSecundario": "Os anéis de Saturno são feitos de pedaços de gelo e rocha. É um planeta muito interessante de se olhar!",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/006-saturn.png",
+    "imagem": "sistemaSolar/006-saturn.png",
     "galeria": [],
     "pagina": 7
   },
@@ -110,7 +136,7 @@
     "textoPrincipal": "Urano é um planeta azul e gelado. Ele também tem anéis, mas eles são mais finos e menos visíveis do que os de Saturno.",
     "textoSecundario": "Urano é conhecido por ser inclinado de lado, o que significa que ele 'deita' enquanto gira.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/007-uranus.png",
+    "imagem": "sistemaSolar/007-uranus.png",
     "galeria": [],
     "pagina": 8
   },
@@ -120,7 +146,7 @@
     "textoPrincipal": "Netuno é um planeta azul escuro e frio. Ele é parecido com Urano, mas tem uma cor diferente.",
     "textoSecundario": "Netuno é conhecido por suas tempestades poderosas e ventos fortes. Ele também tem anéis, assim como Júpiter e Saturno.",
     "curiosidades": ["array index 1", "array index 2", "array index 3"],
-    "imagem": "SistemaSolar/002-neptune.png",
+    "imagem": "sistemaSolar/002-neptune.png",
     "galeria": [],
     "pagina": 9
   }
