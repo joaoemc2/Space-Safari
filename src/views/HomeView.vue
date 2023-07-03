@@ -11,7 +11,7 @@ const dadosCards = ref([
     passosConcluidos: 2,
     passosTotais: 5,
     componente: 0,
-    imagem: 'Home/solar-system.png',
+    imagem: 'home/solar-system.png',
     corTema: 'amarelo'
   },
   {
@@ -21,7 +21,7 @@ const dadosCards = ref([
     passosConcluidos: 0,
     passosTotais: 7,
     componente: 1,
-    imagem: 'Home/space-shuttle.png',
+    imagem: 'home/space-shuttle.png',
     corTema: 'vermelho'
   },
   {
@@ -31,7 +31,7 @@ const dadosCards = ref([
     passosConcluidos: 0,
     passosTotais: 8,
     componente: 2,
-    imagem: 'Home/falling-star.png',
+    imagem: 'home/falling-star.png',
     corTema: 'azul'
   }
 ])
