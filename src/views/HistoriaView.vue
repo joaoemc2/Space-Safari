@@ -64,7 +64,7 @@ function voltarParaHome() {
 }
 
 function getImageUrl(name: string) {
-  return new URL(`/src/assets/image/${name}`, import.meta.url).href
+  return new URL(`/src/assets/images/${name}`, import.meta.url).href
 }
 
 // function playAudio() {
@@ -116,7 +116,7 @@ function getImageUrl(name: string) {
 .historia {
   width: 100vw;
   .header {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin-bottom: 32px;

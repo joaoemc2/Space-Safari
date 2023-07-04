@@ -16,7 +16,7 @@ function login() {
 <template>
   <main class="login-container">
     <section class="topo-container">
-      <img class="imagem" src="@/assets/image/logo.png" alt="" />
+      <img class="imagem" src="@/assets/images/logo.png" alt="" />
     </section>
     <section class="base-container">
       <h1 class="titulo">Space Safari</h1>

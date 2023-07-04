@@ -9,7 +9,7 @@ const prop = defineProps<{
 const imgSelecionada = ref<number>(0)
 
 function getImageUrl(name: string) {
-  return new URL(`/src/assets/image/${name}`, import.meta.url).href
+  return new URL(`/src/assets/images/${name}`, import.meta.url).href
 }
 
 function alterarImagem(direcao: string) {

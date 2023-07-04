@@ -22,7 +22,7 @@ function redirecionar() {
 }
 
 const getImageUrl = (name: string) => {
-  return new URL(`/src/assets/image/${name}`, import.meta.url).href
+  return new URL(`/src/assets/images/${name}`, import.meta.url).href
 }
 </script>
 
@@ -60,6 +60,7 @@ const getImageUrl = (name: string) => {
   width: fit-content;
   height: fit-content;
   .topo {
+    width: 100%;
     .header {
       display: flex;
       justify-content: space-between;
