@@ -145,33 +145,9 @@ table {
   line-height: 140% !important;
 }
 
-.btn-one {
-  background-color: #f3f3f3;
-  border-radius: 16px;
-  padding: 14px 32px !important;
-  border: none;
-  height: min-content;
-
-  color: #7063ff;
-  font-size: 14px;
-  font-weight: 500;
-  &:hover {
-    opacity: 0.9;
-  }
-}
-.btn-two {
-  background-color: #7063ff;
-  border-radius: 16px;
-  padding: 14px 32px !important;
-  border: none;
-  height: min-content;
-  min-width: 130px;
-
-  color: #f3f3f3;
-  font-size: 14px;
-  font-weight: 500;
-  &:hover {
-    opacity: 0.9;
+@media (min-width: 800px) {
+  .router {
+    max-width: 460px;
   }
 }
 </style>
