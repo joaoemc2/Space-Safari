@@ -30,7 +30,7 @@ function login() {
           <i class="bi bi-instagram"></i>
           <i class="bi bi-linkedin"></i>
         </div>
-        <p class="footer-texto">Space Safari v 0.1.0 - 2023</p>
+        <p class="footer-texto">Space Safari v 0.2.0 - 2023</p>
       </footer>
     </section>
   </main>
