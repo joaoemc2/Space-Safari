@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type PerguntaType } from '@/types/PerguntaType'
 import BotaoPequeno from '../shared/BotaoPequeno.vue'
-import { ref } from 'vue'
+import { watch, ref } from 'vue'
 
 const prop = defineProps<{
   quiz: PerguntaType
@@ -12,6 +12,18 @@ const mostarAlerta = ref<boolean>(false)
 const mostarCallback = ref<boolean>(false)
 const respostaCorreta = ref<boolean>()
 const bloquearResposta = ref<boolean>(false)
+
+watch(prop, () => {
+  limparVariaveisQuiz()
+})
+
+function limparVariaveisQuiz() {
+  alternativaSelecionada.value = undefined
+  mostarAlerta.value = false
+  mostarCallback.value = false
+  respostaCorreta.value = undefined
+  bloquearResposta.value = false
+}
 
 function selecionarAlternativa(questao: number) {
   if (!bloquearResposta.value) {
