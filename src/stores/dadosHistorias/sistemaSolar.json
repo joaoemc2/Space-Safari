@@ -24,7 +24,7 @@
         "callback": [
           "A Terra é o planeta que vivemos, não é uma estrela.",
           "Resposta correta, parabéns!",
-          "A Lua e nosso satélite natural, ela não é uma estrela."
+          "A Lua é nosso satélite natural, ela não é uma estrela."
         ]
       },
       {
@@ -55,7 +55,12 @@
       "3 - Mercúrio não tem atmosfera, o que significa que não tem ar para respirarmos."
     ],
     "imagem": "sistemaSolar/004-mercury.png",
-    "galeria": [],
+    "galeria": [
+      "sistemaSolar/galeria/mercurio/mercurio-index0.png",
+      "sistemaSolar/galeria/mercurio/mercurio-index1.png",
+      "sistemaSolar/galeria/mercurio/mercurio-index2.png",
+      "sistemaSolar/galeria/mercurio/mercurio-index3.png"
+    ],
     "perguntas": [
       {
         "pergunta": "Qual é o planeta mais próximo do Sol?",
@@ -80,35 +85,143 @@
     ],
     "pagina": 2
   },
-
   {
     "titulo": "Desbravando o Sistema Solar",
-    "subTitulo": "Vênus",
-    "textoPrincipal": "Vênus é conhecido como o 'Planeta Vizinho da Terra'. Ele é bem brilhante no céu e tem uma atmosfera muito densa, cheia de nuvens.",
-    "textoSecundario": "Vênus é o planeta mais quente do Sistema Solar, com uma temperatura super quente o tempo todo.",
-    "curiosidades": ["array index 1", "array index 2", "array index 3"],
+    "subTitulo": "O Planeta Vênus",
+    "textoPrincipal": "Vênus é conhecido como o planeta irmão da Terra devido ao tamanho e composição similares.",
+    "textoSecundario": "Ele é envolto por uma densa atmosfera composta principalmente de dióxido de carbono.",
+    "curiosidades": [
+      "1 - Vênus é o planeta mais quente do Sistema Solar, com temperaturas que chegam a 470°C!",
+      "2 - Ele tem um movimento de rotação retrógrado, ou seja, gira no sentido oposto à maioria dos planetas.",
+      "3 - Vênus é o objeto mais brilhante no céu noturno depois da Lua."
+    ],
     "imagem": "sistemaSolar/003-venus.png",
-    "galeria": [],
+    "galeria": [
+      "sistemaSolar/galeria/venus/venus-index0.png",
+      "sistemaSolar/galeria/venus/venus-index1.png",
+      "sistemaSolar/galeria/venus/venus-index2.png",
+      "sistemaSolar/galeria/venus/venus-index3.png"
+    ],
+    "perguntas": [
+      {
+        "pergunta": "Por que Vênus é conhecido como o planeta irmão da Terra?",
+        "alternativas": [
+          "Tem a mesma cor da Terra",
+          "Tem o mesmo tamanho da Terra",
+          "Tem tamanho e composição similares à Terra"
+        ],
+        "respostaCorreta": 2,
+        "callback": [
+          "A cor de Vênus é diferente da Terra.",
+          "O tamanho de Vênus é diferente da Terra.",
+          "Exatamente! Vênus tem tamanho e composição similares à Terra, por isso é chamado de planeta irmão."
+        ]
+      },
+      {
+        "pergunta": "Por que Vênus é o planeta mais quente do Sistema Solar?",
+        "alternativas": [
+          "Porque está mais próximo do Sol",
+          "Porque tem muitas montanhas",
+          "Porque sua atmosfera retém muito calor"
+        ],
+        "respostaCorreta": 2,
+        "callback": [
+          "A distância de Vênus em relação ao Sol não é o único motivo para o seu calor intenso.",
+          "As montanhas em Vênus não são a principal razão para o seu calor intenso.",
+          "Correto! A atmosfera densa de Vênus retém muito calor, tornando-o o planeta mais quente do Sistema Solar."
+        ]
+      }
+    ],
     "pagina": 3
   },
   {
     "titulo": "Desbravando o Sistema Solar",
-    "subTitulo": "Terra",
-    "textoPrincipal": "A Terra é o nosso planeta! É muito especial porque é o único planeta conhecido que tem vida. Nós vivemos aqui!",
-    "textoSecundario": "A Terra tem água, ar para respirar e uma variedade incrível de plantas e animais.",
-    "curiosidades": ["array index 1", "array index 2", "array index 3"],
+    "subTitulo": "O Planeta Terra",
+    "textoPrincipal": "A Terra é o nosso lar, o único planeta conhecido onde a vida existe.",
+    "textoSecundario": "Ele é o terceiro planeta a partir do Sol e tem uma atmosfera que nos protege.",
+    "curiosidades": [
+      "1 - A Terra é o único planeta no Sistema Solar com água líquida em sua superfície.",
+      "2 - Ela tem uma incrível diversidade de vida, desde animais, plantas até os seres humanos.",
+      "3 - O planeta Terra possui camadas, como a crosta, o manto e o núcleo."
+    ],
     "imagem": "sistemaSolar/009-planet-earth.png",
-    "galeria": [],
+    "galeria": [
+      "sistemaSolar/galeria/terra/terra-index0.png",
+      "sistemaSolar/galeria/terra/terra-index1.png",
+      "sistemaSolar/galeria/terra/terra-index2.png",
+      "sistemaSolar/galeria/terra/terra-index3.png"
+    ],
+    "perguntas": [
+      {
+        "pergunta": "O que torna a Terra especial em comparação com outros planetas?",
+        "alternativas": ["Possui anéis", "Tem água líquida e vida", "É o maior planeta"],
+        "respostaCorreta": 1,
+        "callback": [
+          "A Terra não possui anéis, como outros planetas do Sistema Solar.",
+          "Correto! A Terra é especial porque tem água líquida em sua superfície e é o único planeta conhecido com vida.",
+          "A Terra não é o maior planeta do Sistema Solar."
+        ]
+      },
+      {
+        "pergunta": "Quais são as camadas da Terra?",
+        "alternativas": [
+          "Lua, Sol e Estrelas",
+          "Crosta, Manto e Núcleo",
+          "Montanhas, Rios e Oceanos"
+        ],
+        "respostaCorreta": 1,
+        "callback": [
+          "Lua, Sol e Estrelas não são as camadas da Terra.",
+          "Exatamente! A Terra possui camadas: a crosta, o manto e o núcleo.",
+          "Montanhas, rios e oceanos são características da superfície da Terra, não suas camadas internas."
+        ]
+      }
+    ],
     "pagina": 4
   },
   {
     "titulo": "Desbravando o Sistema Solar",
-    "subTitulo": "Marte",
-    "textoPrincipal": "Marte é chamado de 'Planeta Vermelho' porque sua superfície tem uma cor avermelhada. É um planeta rochoso e tem montanhas e vales.",
-    "textoSecundario": "Marte tem uma atmosfera muito fina e é conhecido por suas calotas polares de gelo.",
-    "curiosidades": ["array index 1", "array index 2", "array index 3"],
+    "subTitulo": "O Planeta Marte",
+    "textoPrincipal": "Marte é conhecido como o Planeta Vermelho devido à cor característica de sua superfície.",
+    "textoSecundario": "Ele é o quarto planeta a partir do Sol e tem características que o tornam similar à Terra.",
+    "curiosidades": [
+      "1 - Marte tem montanhas e vales impressionantes, incluindo o maior vulcão conhecido do Sistema Solar, chamado Monte Olimpo.",
+      "2 - Ele possui uma fina atmosfera composta principalmente de dióxido de carbono.",
+      "3 - Cientistas acreditam que pode ter existido água líquida em Marte no passado."
+    ],
     "imagem": "sistemaSolar/005-mars.png",
-    "galeria": [],
+    "galeria": [
+      "sistemaSolar/galeria/marte/marte-index0.png",
+      "sistemaSolar/galeria/marte/marte-index1.png",
+      "sistemaSolar/galeria/marte/marte-index2.png",
+      "sistemaSolar/galeria/marte/marte-index3.png"
+    ],
+    "perguntas": [
+      {
+        "pergunta": "Por que Marte é chamado de Planeta Vermelho?",
+        "alternativas": [
+          "Porque é coberto de areia vermelha",
+          "Porque é feito de fogo",
+          "Porque tem muitas montanhas"
+        ],
+        "respostaCorreta": 0,
+        "callback": [
+          "Marte não é feito de fogo.",
+          "As montanhas em Marte não são a razão para ser chamado de Planeta Vermelho.",
+          "Exatamente! Marte é chamado de Planeta Vermelho devido à cor vermelha de sua superfície, coberta de areia vermelha."
+        ]
+      },
+      {
+        "pergunta": "O que os cientistas acreditam que pode ter existido em Marte no passado?",
+        "alternativas": ["Água líquida", "Ar respirável", "Monstros gigantes"],
+        "respostaCorreta": 0,
+        "callback": [
+          "Ar respirável não é o que os cientistas acreditam ter existido em Marte no passado.",
+          "Monstros gigantes não são parte das descobertas científicas em Marte.",
+          "Correto! Os cientistas acreditam que água líquida possa ter existido em Marte no passado, o que indica a possibilidade de ter tido condições favoráveis à vida."
+        ]
+      }
+    ],
     "pagina": 5
   },
   {
