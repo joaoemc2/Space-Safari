@@ -17,7 +17,7 @@ const prop = defineProps<{
     <section class="curiosidades-container">
       <h3 class="titulo">Curiosidades</h3>
       <img
-        src="@/assets/image/SistemaSolar/sistema-solar-icon.png"
+        src="@/assets/images/sistemaSolar/sistema-solar-icon.png"
         alt=""
         class="imagem-container"
       />
