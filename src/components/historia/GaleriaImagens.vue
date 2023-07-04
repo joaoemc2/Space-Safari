@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import BotaoPequeno from '../shared/BotaoPequeno.vue'
 
 const prop = defineProps<{
@@ -7,6 +7,14 @@ const prop = defineProps<{
 }>()
 
 const imgSelecionada = ref<number>(0)
+
+watch(prop, () => {
+  limparVariaveisQuiz()
+})
+
+function limparVariaveisQuiz() {
+  imgSelecionada.value = 0
+}
 
 function getImageUrl(name: string) {
   return new URL(`/src/assets/images/${name}`, import.meta.url).href
