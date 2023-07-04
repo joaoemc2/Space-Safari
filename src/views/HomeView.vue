@@ -8,11 +8,11 @@ const dadosCards = ref([
     titulo: 'Desbravando os Planetas',
     texto:
       'O Sistema Solar é uma grande família de planetas e outras coisas que giram ao redor do Sol.',
-    passosConcluidos: 2,
-    passosTotais: 5,
+    passosConcluidos: 0,
+    passosTotais: 9,
     componente: 0,
     imagem: 'home/solar-system.png',
-    corTema: 'amarelo'
+    corTema: 'laranja'
   },
   {
     titulo: 'Descobrindo o Universo',
